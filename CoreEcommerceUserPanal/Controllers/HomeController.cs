@@ -13,7 +13,7 @@ namespace CoreEcommerceUserPanal.Controllers
     
     public class HomeController : Controller
     {
-        ShoppingProjectContext context = new ShoppingProjectContext();
+        ShoppingProjectFinalContext context = new ShoppingProjectFinalContext();
         
          [HttpGet]
         public IActionResult Index()

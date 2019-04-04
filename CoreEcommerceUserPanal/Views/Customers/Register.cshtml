@@ -1,27 +1,27 @@
 ﻿@model CoreEcommerceUserPanal.Models.Customers
 @{
     ViewData["Title"] = "Register";
-    Layout = "~/Views/Shared/_UserLayout.cshtml";
+    Layout = "~/Views/Shared/_Default.cshtml";
 }
 
 
 <form asp-action="Register" asp-controller="Customers">
     <div class="row">
-        <h4 class="col-12 mb-3">Basic Details</h4>
+        <h4 class="col-12 mb-3">Register</h4>
         <div class="col-md-6 mb-3">
 
             <label asp-for="FirstName"><b>First Name</b></label>
-            <input type="text" asp-for="FirstName" class="form-control" placeholder="Enter First Name">
+            <input type="text" asp-for="FirstName" class="form-control" placeholder="Enter First Name" required>
 
         </div>
         <div class="col-md-6 mb-3">
             <label asp-for="LastName"><b>Last Name</b></label>
-            <input type="text" asp-for="LastName" class="form-control" placeholder="Enter Last Name">
+            <input type="text" asp-for="LastName" class="form-control" placeholder="Enter Last Name" required>
 
         </div>
         <div class="col-12 mb-3">
             <label asp-for="UserName"><b>User Name</b></label>
-            <input type="text" asp-for="UserName" class="form-control" placeholder="Enter User Name">
+            <input type="text" asp-for="UserName" class="form-control" placeholder="Enter User Name" required>
         </div>
         <div class="col-12 mb-3">
             <label asp-for="Gender">Gender </label>
@@ -33,11 +33,11 @@
         </div>
         <div class="col-12 mb-3">
             <label asp-for="Password"><b>Password</b></label>
-            <input type="password" asp-for="Password" class="form-control" placeholder="Enter Password">
+            <input type="password" asp-for="Password" class="form-control" placeholder="Enter Password" required>
         </div>
         <div class="col-12 mb-3">
             <label asp-for="EmailId"><b>Email</b></label>
-            <input type="email" asp-for="EmailId" class="form-control" placeholder="Enter Email">
+            <input type="email" asp-for="EmailId" class="form-control" placeholder="Enter Email" required>
         </div>
 
         <br />
@@ -48,13 +48,13 @@
 
         <div class="col-12 mb-3">
             <label asp-for="Address"><b>Address</b></label>
-            <input type="text" asp-for="Address" class="form-control" placeholder="Enter Address">
+            <input type="text" asp-for="Address" class="form-control" placeholder="Enter Address" required>
         </div>
 
 
         <div class="col-12 mb-3">
             <label asp-for="Country"><b>Country</b></label>
-            <select asp-for="Country" id="Country" class="form-control">
+            <select asp-for="Country" id="Country" class="form-control" required>
                 <option value="">Select Country</option>
                 <option>Afghanistan</option>
                 <option>Bhutan</option>
@@ -83,7 +83,7 @@
 
         <div class="col-12 mb-3">
             <label asp-for="State"><b>State</b></label>
-            <select asp-for="State" id="State" class="form-control">
+            <select asp-for="State" id="State" class="form-control" required>
                 <option value="">Select State</option>
                 <option>Andaman and Nicobar Islands</option>
                 <option>Andhra Pradesh</option>
@@ -126,11 +126,11 @@
 
         <div class="col-md-6 mb-3">
             <label asp-for="Zip"><b>Zip Code</b></label>
-            <input type="text" asp-for="Zip" class="form-control" placeholder="Enter Zip Code">
+            <input type="text" asp-for="Zip" class="form-control" placeholder="Enter Zip Code" required>
         </div>
         <div class="col-md-6 mb-3">
             <label asp-for="PhoneNo"><b>PhoneNo</b></label>
-            <input type="text" asp-for="PhoneNo" class="form-control" placeholder="Enter PhoneNo">
+            <input type="text" asp-for="PhoneNo" class="form-control" placeholder="Enter PhoneNo" required>
         </div>
 
 

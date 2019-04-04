@@ -10,7 +10,7 @@ namespace CoreEcommerceUserPanal.Controllers
 {
     public class CustomersController : Controller
     {
-        ShoppingProjectContext context = new ShoppingProjectContext();
+        ShoppingProjectFinalContext context = new ShoppingProjectFinalContext();
         public IActionResult Index()
         {
             return View();
@@ -37,8 +37,8 @@ namespace CoreEcommerceUserPanal.Controllers
 
         public ActionResult Login(string username, string password)
         {
-
-
+           
+            
             var user = context.Customers.Where(a => a.UserName == username).SingleOrDefault();
             ViewBag.cust = user;
             if (user == null)
@@ -50,10 +50,10 @@ namespace CoreEcommerceUserPanal.Controllers
             {
                 var userName = user.UserName;
                 int custId = ViewBag.cust.CustomerId;
-                if(username !=null && password !=null && username.Equals(userName) && password.Equals(user.Password))
+                if (username != null && password != null && username.Equals(userName) && password.Equals(user.Password))
                 {
                     HttpContext.Session.SetString("uname", username);
-                    return RedirectToAction("checkout", "cart", new
+                    return RedirectToAction("Index", "Home", new
                     {
                         @id = custId
                     });
@@ -70,7 +70,7 @@ namespace CoreEcommerceUserPanal.Controllers
         public IActionResult Logout()
         {
             HttpContext.Session.Remove("uname");
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "Home");
         }
     }
 }

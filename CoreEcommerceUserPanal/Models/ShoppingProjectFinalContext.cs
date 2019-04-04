@@ -4,13 +4,13 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace CoreEcommerceUserPanal.Models
 {
-    public partial class ShoppingProjectContext : DbContext
+    public partial class ShoppingProjectFinalContext : DbContext
     {
-        public ShoppingProjectContext()
+        public ShoppingProjectFinalContext()
         {
         }
 
-        public ShoppingProjectContext(DbContextOptions<ShoppingProjectContext> options)
+        public ShoppingProjectFinalContext(DbContextOptions<ShoppingProjectFinalContext> options)
             : base(options)
         {
         }
@@ -28,7 +28,7 @@ namespace CoreEcommerceUserPanal.Models
             if (!optionsBuilder.IsConfigured)
             {
 //#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Server=TRD-519; Database=ShoppingProject; Integrated Security=true;");
+                optionsBuilder.UseSqlServer("Server=TRD-518; Database=ShoppingProjectFinal; Integrated Security=true;");
             }
         }
 

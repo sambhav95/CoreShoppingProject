@@ -13,7 +13,7 @@ namespace CoreEcommerceUserPanal.Controllers
     [Route("cart")]
     public class CartController : Controller
     {
-        ShoppingProjectContext context = new ShoppingProjectContext();
+        ShoppingProjectFinalContext context = new ShoppingProjectFinalContext();
         [Route("index")]
        
         public IActionResult Index()
