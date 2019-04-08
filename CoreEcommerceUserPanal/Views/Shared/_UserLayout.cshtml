@@ -10,7 +10,7 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-        <a class="nav-link" href="#" >Shopping Mania</a>
+        <a class="nav-link" href="#">Shopping Mania</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -23,14 +23,14 @@
                 <li class="nav-item active">
                     <a class="nav-link" asp-controller="Home" asp-action="About">About Us</a>
                 </li>
-               
+
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Search By</a>
                     <div class="dropdown-menu" aria-labelledby="dropdown01">
                         <a class="dropdown-item" asp-controller="ProductCategory" asp-action="Index">Categories</a>
                         <a class="dropdown-item" asp-controller="Brand" asp-action="Index">Brand</a>
                         @*<a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>*@
+                            <a class="dropdown-item" href="#">Something else here</a>*@
                     </div>
                 </li>
             </ul>
@@ -72,7 +72,7 @@
     <main role="main" class="container">
 
         <div class="starter-template">
-        @RenderBody()    
+            @RenderBody()
         </div>
 
     </main><!-- /.container -->
