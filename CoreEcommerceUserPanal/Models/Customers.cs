@@ -7,6 +7,7 @@ namespace CoreEcommerceUserPanal.Models
     {
         public Customers()
         {
+            Feedbacks = new HashSet<Feedbacks>();
             Orders = new HashSet<Orders>();
         }
 
@@ -24,6 +25,7 @@ namespace CoreEcommerceUserPanal.Models
         public string Password { get; set; }
         public bool ShippingAddress { get; set; }
 
+        public ICollection<Feedbacks> Feedbacks { get; set; }
         public ICollection<Orders> Orders { get; set; }
     }
 }

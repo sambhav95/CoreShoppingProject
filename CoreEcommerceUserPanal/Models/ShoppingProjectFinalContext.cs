@@ -16,8 +16,10 @@ namespace CoreEcommerceUserPanal.Models
         }
 
         public virtual DbSet<Admins> Admins { get; set; }
+        public virtual DbSet<Brands> Brands { get; set; }
         public virtual DbSet<Categories> Categories { get; set; }
         public virtual DbSet<Customers> Customers { get; set; }
+        public virtual DbSet<Feedbacks> Feedbacks { get; set; }
         public virtual DbSet<OrderProducts> OrderProducts { get; set; }
         public virtual DbSet<Orders> Orders { get; set; }
         public virtual DbSet<Products> Products { get; set; }
@@ -27,7 +29,7 @@ namespace CoreEcommerceUserPanal.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
                 optionsBuilder.UseSqlServer("Server=TRD-518; Database=ShoppingProjectFinal; Integrated Security=true;");
             }
         }
@@ -37,6 +39,11 @@ namespace CoreEcommerceUserPanal.Models
             modelBuilder.Entity<Admins>(entity =>
             {
                 entity.HasKey(e => e.AdminId);
+            });
+
+            modelBuilder.Entity<Brands>(entity =>
+            {
+                entity.HasKey(e => e.BrandId);
             });
 
             modelBuilder.Entity<Categories>(entity =>
@@ -49,6 +56,17 @@ namespace CoreEcommerceUserPanal.Models
                 entity.HasKey(e => e.CustomerId);
 
                 entity.Property(e => e.ShippingAddress).HasColumnName("Shipping_Address");
+            });
+
+            modelBuilder.Entity<Feedbacks>(entity =>
+            {
+                entity.HasKey(e => e.FeedbackId);
+
+                entity.HasIndex(e => e.CustomerId);
+
+                entity.HasOne(d => d.Customer)
+                    .WithMany(p => p.Feedbacks)
+                    .HasForeignKey(d => d.CustomerId);
             });
 
             modelBuilder.Entity<OrderProducts>(entity =>
@@ -81,9 +99,15 @@ namespace CoreEcommerceUserPanal.Models
             {
                 entity.HasKey(e => e.ProductId);
 
+                entity.HasIndex(e => e.BrandId);
+
                 entity.HasIndex(e => e.ProductCategoryId);
 
                 entity.HasIndex(e => e.VendorId);
+
+                entity.HasOne(d => d.Brand)
+                    .WithMany(p => p.Products)
+                    .HasForeignKey(d => d.BrandId);
 
                 entity.HasOne(d => d.ProductCategory)
                     .WithMany(p => p.Products)

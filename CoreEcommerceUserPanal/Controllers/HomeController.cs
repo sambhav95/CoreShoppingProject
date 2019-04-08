@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using CoreEcommerceUserPanal.Models;
 using Microsoft.AspNetCore.Http;
 using CoreEcommerceUserPanal.Helpers;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace CoreEcommerceUserPanal.Controllers
 {
@@ -88,5 +89,19 @@ namespace CoreEcommerceUserPanal.Controllers
         //    AddErrors(result);
         //    return View(model);
         //}
+        [HttpGet]
+        public ViewResult Feedback()
+        {
+            ViewBag.Feed = new SelectList(context.Customers, "CustomerId", "UserName");
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Feedback(Feedbacks fed)
+        {
+            context.Feedbacks.Add(fed);
+            context.SaveChanges();
+
+            return RedirectToAction("Index", "Home");
+        }
     }
 }

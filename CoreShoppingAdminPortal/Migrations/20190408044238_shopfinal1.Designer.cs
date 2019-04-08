@@ -4,14 +4,16 @@ using CoreShoppingAdminPortal.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CoreShoppingAdminPortal.Migrations
 {
     [DbContext(typeof(ShopDataDbContext))]
-    partial class ShopDataDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190408044238_shopfinal1")]
+    partial class shopfinal1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -48,7 +50,7 @@ namespace CoreShoppingAdminPortal.Migrations
 
                     b.HasKey("BrandId");
 
-                    b.ToTable("Brands");
+                    b.ToTable("Brand");
                 });
 
             modelBuilder.Entity("CoreShoppingAdminPortal.Models.Customer", b =>
@@ -104,7 +106,7 @@ namespace CoreShoppingAdminPortal.Migrations
 
                     b.HasIndex("CustomerId");
 
-                    b.ToTable("Feedbacks");
+                    b.ToTable("Feedback");
                 });
 
             modelBuilder.Entity("CoreShoppingAdminPortal.Models.Order", b =>

@@ -26,6 +26,7 @@ namespace CoreShoppingAdminPortal.Controllers
 
             ViewBag.products = new SelectList(context.Vendors, "VendorId", "VendorName");
             ViewBag.products1 = new SelectList(context.Categories, "ProductCategoryId", "CategoryName");
+            ViewBag.product2 = new SelectList(context.Brands, "BrandId", "BrandName");
             return View();
         }
         [HttpPost]
@@ -64,6 +65,8 @@ namespace CoreShoppingAdminPortal.Controllers
             new SelectList(context.Categories, "ProductCategoryId", "CategoryName",pc.ProductCategoryId);
             ViewBag.Vendor =
             new SelectList(context.Vendors, "VendorId", "VendorName",pc.VendorId);
+            ViewBag.Brand =
+                 new SelectList(context.Brands, "BrandId", "BrandName", pc.BrandId);
             return View(pc);
         }
         [HttpPost]

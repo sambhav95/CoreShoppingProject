@@ -18,7 +18,9 @@ namespace CoreEcommerceUserPanal.Models
         public string ProductDescription { get; set; }
         public int VendorId { get; set; }
         public int ProductCategoryId { get; set; }
+        public int BrandId { get; set; }
 
+        public Brands Brand { get; set; }
         public Categories ProductCategory { get; set; }
         public Vendors Vendor { get; set; }
         public ICollection<OrderProducts> OrderProducts { get; set; }
