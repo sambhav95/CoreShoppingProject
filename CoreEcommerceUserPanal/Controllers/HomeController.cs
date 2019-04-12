@@ -103,5 +103,9 @@ namespace CoreEcommerceUserPanal.Controllers
 
             return RedirectToAction("Index", "Home");
         }
+        public ActionResult HomePage()
+        {
+            return View();
+        }
     }
 }
