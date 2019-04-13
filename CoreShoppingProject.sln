@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreShoppingAdminPortal", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreEcommerceUserPanal", "CoreEcommerceUserPanal\CoreEcommerceUserPanal.csproj", "{233D1E43-6C45-4FDB-831D-DBC33555D726}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject", "UnitTestProject\UnitTestProject.csproj", "{73677BDE-05DC-4E6F-9A44-FE0DFE2470BC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserPortalXUnitTestProject", "UserPortalXUnitTestProject\UserPortalXUnitTestProject.csproj", "{73598970-5899-4B5F-B032-A68A9A00C562}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{233D1E43-6C45-4FDB-831D-DBC33555D726}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{233D1E43-6C45-4FDB-831D-DBC33555D726}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{233D1E43-6C45-4FDB-831D-DBC33555D726}.Release|Any CPU.Build.0 = Release|Any CPU
-		{73677BDE-05DC-4E6F-9A44-FE0DFE2470BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{73677BDE-05DC-4E6F-9A44-FE0DFE2470BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{73677BDE-05DC-4E6F-9A44-FE0DFE2470BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{73677BDE-05DC-4E6F-9A44-FE0DFE2470BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73598970-5899-4B5F-B032-A68A9A00C562}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73598970-5899-4B5F-B032-A68A9A00C562}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73598970-5899-4B5F-B032-A68A9A00C562}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73598970-5899-4B5F-B032-A68A9A00C562}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

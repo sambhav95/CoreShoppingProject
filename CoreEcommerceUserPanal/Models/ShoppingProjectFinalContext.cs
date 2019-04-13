@@ -29,7 +29,7 @@ namespace CoreEcommerceUserPanal.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
+//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
                 optionsBuilder.UseSqlServer("Server=TRD-518; Database=ShoppingProjectFinal; Integrated Security=true;");
             }
         }
@@ -122,6 +122,16 @@ namespace CoreEcommerceUserPanal.Models
             {
                 entity.HasKey(e => e.VendorId);
             });
+
+            modelBuilder.Entity<Categories>(entity =>
+            {
+                entity.Property(e => e.CategoryName)
+                .HasColumnName("CategoryName")
+                .HasMaxLength(30)
+                .IsUnicode(false);
+            });
+            base.OnModelCreating(modelBuilder);
+
         }
     }
 }
