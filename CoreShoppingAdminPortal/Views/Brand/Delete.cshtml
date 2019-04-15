@@ -1,8 +1,7 @@
 ﻿@model CoreShoppingAdminPortal.Models.Brand
-   @{ ViewData["Title"] = "Delete";
+@{ ViewData["Title"] = "Delete";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
-
 <h3>Are you sure you want to delete ? </h3>
 &nbsp; &nbsp;
 <table class="table">
@@ -13,7 +12,6 @@
             </th>
             <th scope="col"> @Html.DisplayNameFor(Model => Model.BrandName)</th>
             <th scope="col"> @Html.DisplayNameFor(Model => Model.BrandDescription)</th>
-
         </tr>
     </thead>
     <tbody>
@@ -27,10 +25,8 @@
             <td>
                 @Html.DisplayFor(Model => Model.BrandDescription)
             </td>
-
         </tr>
     </tbody>
-
 </table>
 @using (Html.BeginForm("Delete", "Brand", FormMethod.Post))
 {
@@ -41,4 +37,3 @@
         </button>
     </center>
 }
-
